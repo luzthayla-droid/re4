@@ -1,0 +1,212 @@
+/* --- CONFIGURAÇÕES GERAIS --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #1E1E1E; /* Cinza Escuro */
+    color: #F0F2F5; /* Branco Sujo */
+    overflow-x: hidden;
+}
+
+/* --- BARRA DE NAVEGAÇÃO --- */
+header {
+    background-color: #0D0D0D; /* Preto Profundo */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    border-bottom: 2px solid #5E4B3C; /* Marrom Vila */
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #F0F2F5;
+}
+
+.logo span {
+    color: #A31D1D; /* Vermelho Ganado */
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-menu a {
+    color: #8C9594; /* Cinza Metálico */
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: #A31D1D; /* Vermelho Ganado */
+}
+
+/* --- SEÇÃO HOME (HERO) --- */
+#home {
+    height: 100vh;
+    background: linear-gradient(rgba(13, 13, 13, 0.65), rgba(30, 30, 30, 1)), 
+                url('https://image.api.playstation.com/vulcan/ap/rnd/202210/0712/BiS5QP6h4506JHyJlZlVzK9D.jpg') no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 1rem;
+}
+
+#home h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.9);
+    letter-spacing: 4px;
+}
+
+#home p {
+    font-size: 1.2rem;
+    color: #8C9594;
+    max-width: 600px;
+    margin-bottom: 2rem;
+}
+
+/* Botão Interativo */
+.btn-interativo {
+    background-color: #A31D1D; /* Vermelho Ganado */
+    color: #F0F2F5;
+    border: 2px solid #5E4B3C; /* Marrom Vila */
+    padding: 0.8rem 2.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(163, 29, 29, 0.4);
+}
+
+.btn-interativo:hover {
+    background-color: #BD1616;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(189, 22, 22, 0.6);
+}
+
+/* --- SEÇÕES GENÉRICAS --- */
+section {
+    padding: 6rem 2rem 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: #F0F2F5;
+    border-left: 5px solid #A31D1D;
+    padding-left: 1rem;
+    margin-bottom: 2rem;
+}
+
+/* --- SEÇÃO SOBRE --- */
+.sobre-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.sobre-text p {
+    color: #8C9594;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+.sobre-img {
+    width: 100%;
+    height: auto;
+    border: 3px solid #5E4B3C;
+    border-radius: 4px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.6);
+}
+
+/* --- SEÇÃO GALERIA --- */
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.galeria-card {
+    background-color: #0D0D0D;
+    border: 2px solid #5E4B3C;
+    border-radius: 4px;
+    overflow: hidden;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.galeria-card:hover {
+    transform: scale(1.02);
+    border-color: #A31D1D;
+}
+
+.galeria-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+.galeria-info {
+    padding: 1.5rem;
+}
+
+.galeria-info h3 {
+    margin-bottom: 0.5rem;
+    color: #F0F2F5;
+}
+
+.galeria-info p {
+    color: #8C9594;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+/* --- RODAPÉ --- */
+footer {
+    background-color: #0D0D0D;
+    text-align: center;
+    padding: 2.5rem;
+    margin-top: 4rem;
+    border-top: 2px solid #5E4B3C;
+    color: #8C9594;
+    font-size: 0.9rem;
+}
+
+/* --- RESPONSIVIDADE --- */
+@media (max-width: 768px) {
+    .sobre-content {
+        grid-template-columns: 1fr;
+    }
+    #home h1 {
+        font-size: 2.3rem;
+    }
+    .nav-menu {
+        gap: 1rem;
+    }
+}
